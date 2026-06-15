@@ -20,7 +20,7 @@ class Program{
         st.Name = "Karthik";
 
         Console.WriteLine("Before :"+ x);
-        ChangeInt(x);
+        ChangeInt(x); // A copy is passed to the method, so the original value of x does not change.
         Console.WriteLine("After :"+ x);
 
         Console.WriteLine("Before :"+ st.Name);
