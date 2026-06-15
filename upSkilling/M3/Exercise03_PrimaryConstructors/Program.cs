@@ -1,18 +1,21 @@
-// Exercise03 - Primary Constructors in C# 12
-// The constructor parameters appear directly in the class declaration.
+using System;
 
-Person person = new("Karthik", 24);
-person.DisplayInfo();
+class Person(string Name, int Age)
+{ // Function like constructor
+    public string name {get; set;} = Name;
+    public int age {get; set;} = Age;
 
-internal sealed class Person(string name, int age)
-{
-    public string Name { get; } = name;
-    public int Age { get; } = age;
-
-    public void DisplayInfo()
+    public void Diaplay()
     {
-        Console.WriteLine("Person details");
-        Console.WriteLine($"Name: {Name}");
-        Console.WriteLine($"Age: {Age}");
+        Console.WriteLine("Name: "+name);
+        Console.WriteLine("Age: "+age);
+    }
+}
+
+class Program
+{
+    static void Main(){
+        Person p = new Person("IVS",20);
+        p.Diaplay();
     }
 }
