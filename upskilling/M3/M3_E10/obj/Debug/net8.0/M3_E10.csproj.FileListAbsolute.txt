@@ -1,0 +1,15 @@
+/Users/ivskarthik/Desktop/CTS/upSkilling/M3/M3_E10/bin/Debug/net8.0/M3_E10
+/Users/ivskarthik/Desktop/CTS/upSkilling/M3/M3_E10/bin/Debug/net8.0/M3_E10.deps.json
+/Users/ivskarthik/Desktop/CTS/upSkilling/M3/M3_E10/bin/Debug/net8.0/M3_E10.runtimeconfig.json
+/Users/ivskarthik/Desktop/CTS/upSkilling/M3/M3_E10/bin/Debug/net8.0/M3_E10.dll
+/Users/ivskarthik/Desktop/CTS/upSkilling/M3/M3_E10/bin/Debug/net8.0/M3_E10.pdb
+/Users/ivskarthik/Desktop/CTS/upSkilling/M3/M3_E10/obj/Debug/net8.0/M3_E10.GeneratedMSBuildEditorConfig.editorconfig
+/Users/ivskarthik/Desktop/CTS/upSkilling/M3/M3_E10/obj/Debug/net8.0/M3_E10.AssemblyInfoInputs.cache
+/Users/ivskarthik/Desktop/CTS/upSkilling/M3/M3_E10/obj/Debug/net8.0/M3_E10.AssemblyInfo.cs
+/Users/ivskarthik/Desktop/CTS/upSkilling/M3/M3_E10/obj/Debug/net8.0/M3_E10.csproj.CoreCompileInputs.cache
+/Users/ivskarthik/Desktop/CTS/upSkilling/M3/M3_E10/obj/Debug/net8.0/M3_E10.sourcelink.json
+/Users/ivskarthik/Desktop/CTS/upSkilling/M3/M3_E10/obj/Debug/net8.0/M3_E10.dll
+/Users/ivskarthik/Desktop/CTS/upSkilling/M3/M3_E10/obj/Debug/net8.0/refint/M3_E10.dll
+/Users/ivskarthik/Desktop/CTS/upSkilling/M3/M3_E10/obj/Debug/net8.0/M3_E10.pdb
+/Users/ivskarthik/Desktop/CTS/upSkilling/M3/M3_E10/obj/Debug/net8.0/M3_E10.genruntimeconfig.cache
+/Users/ivskarthik/Desktop/CTS/upSkilling/M3/M3_E10/obj/Debug/net8.0/ref/M3_E10.dll

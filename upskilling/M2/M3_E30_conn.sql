@@ -1,0 +1,12 @@
+CREATE DATABASE CompanyDB;
+
+USE CompanyDB;
+
+CREATE TABLE Employees
+(
+    Id INT AUTO_INCREMENT PRIMARY KEY,
+    Name VARCHAR(100),
+    Salary DECIMAL(10,2)
+);
+
+SELECT * FROM Employees;
