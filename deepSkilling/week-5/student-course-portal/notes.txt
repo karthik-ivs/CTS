@@ -1,0 +1,30 @@
+1. angular.json
+Defines Angular CLI configuration for the project, including build, serve, test, assets, styles, scripts, and production settings.
+
+2. tsconfig.json
+Contains the base TypeScript compiler configuration used by the Angular project.
+
+3. tsconfig.app.json
+Contains TypeScript compiler settings specifically used to compile the Angular application source code.
+
+4. package.json
+Contains project metadata, dependencies, development dependencies, and npm scripts used to build and run the application.
+
+5. src/main.ts
+The main entry point of the Angular application that bootstraps the root application component.
+
+6. src/app/app.config.ts
+Contains the application-level configuration for the standalone Angular application, including providers such as routing and other services.
+
+7. src/app/app.component.ts
+Defines the root AppComponent of the Angular application and connects its TypeScript logic with its HTML template and CSS styles.
+
+8. src/index.html
+The main HTML page loaded by the browser. It contains the root Angular element where the application is rendered.
+
+9. Build Output
+Running ng build creates the dist/ folder. The main-NLVHSGWP.js file contains the compiled and bundled application JavaScript code.
+
+10. Angular Build Budgets
+maximumWarning defines the file size threshold at which Angular displays a build warning. 500kB
+maximumError defines the file size threshold at which Angular treats the size limit as an error and can fail the production build. 1MB
