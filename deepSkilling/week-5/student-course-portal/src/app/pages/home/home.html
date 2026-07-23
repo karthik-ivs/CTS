@@ -1,11 +1,69 @@
 <div class="home-container">
 
-  <h1>Welcome to the Student Course Portal</h1>
+  <!--
+    1. INTERPOLATION
+    Data flows from the component to the HTML.
+    Angular replaces {{ portalName }} with its value.
+  -->
+  <h1>{{ portalName }}</h1>
 
   <p>
     Manage your courses, track your enrollment, and view your academic profile
     from one convenient portal.
   </p>
+
+
+  <!--
+    2. PROPERTY BINDING
+    [disabled] sends the value from the component to the DOM.
+    Since isPortalActive is true, !isPortalActive is false,
+    so the button is enabled.
+  -->
+  <button
+    [disabled]="!isPortalActive"
+    (click)="onEnrollClick()">
+    Enroll Now
+  </button>
+
+
+  <!--
+    3. EVENT BINDING
+    (click) listens for a click event from the user
+    and calls the onEnrollClick() method.
+  -->
+  <p *ngIf="message">
+    {{ message }}
+  </p>
+
+
+  <!--
+    4. TWO-WAY BINDING
+    [(ngModel)] keeps searchTerm and the input value synchronized.
+
+    [property] = one-way binding: Component → DOM
+
+    [(ngModel)] = two-way binding: DOM ↔ Component
+  -->
+  <div class="search-section">
+
+    <label for="search">
+      Search Courses:
+    </label>
+
+    <input
+      id="search"
+      type="text"
+      [(ngModel)]="searchTerm"
+      placeholder="Enter course name">
+
+    <p>
+      Searching for: {{ searchTerm }}
+    </p>
+
+  </div>
+
+
+  <!-- Existing Statistics -->
 
   <div class="stats-row">
 
