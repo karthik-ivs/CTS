@@ -2,19 +2,42 @@
   width: 300px;
   padding: 20px;
   margin: 15px;
+  border-style: solid;
   border-radius: 10px;
-  background-color: #f5f5f5;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   text-align: left;
+  position: relative;
+  transition: transform 0.2s;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+}
+
+.popular-course {
+  background-color: #fff8e1;
+  border-color: #ff9800;
+}
+
+.regular-course {
+  background-color: #f5f5f5;
+  border-color: #1976d2;
+}
+
+.popular-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px 8px;
+  background-color: #ff9800;
+  color: white;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
 }
 
 .course-card h3 {
   margin-top: 0;
   color: #1976d2;
-}
-
-.course-card p {
-  margin: 8px 0;
 }
 
 .course-card button {
@@ -25,8 +48,4 @@
   background-color: #1976d2;
   color: white;
   cursor: pointer;
-}
-
-.course-card button:hover {
-  background-color: #125aa0;
 }

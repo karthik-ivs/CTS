@@ -13,25 +13,32 @@ import {
 export class CourseList {
 
   courses: Course[] = [
-    {
-      id: 1,
-      name: 'Angular Development',
-      code: 'ANG101',
-      credits: 4
-    },
-    {
-      id: 2,
-      name: 'Data Structures',
-      code: 'DSA201',
-      credits: 3
-    },
-    {
-      id: 3,
-      name: 'Database Management',
-      code: 'DBMS301',
-      credits: 3
-    }
-  ];
+
+  {
+    id: 1,
+    name: 'Angular Development',
+    code: 'ANG101',
+    credits: 4,
+    isPopular: true
+  },
+
+  {
+    id: 2,
+    name: 'Data Structures',
+    code: 'DSA201',
+    credits: 3,
+    isPopular: false
+  },
+
+  {
+    id: 3,
+    name: 'Database Management',
+    code: 'DBMS301',
+    credits: 3,
+    isPopular: true
+  }
+
+];
 
   enrolledCourseId: number | null = null;
 
@@ -43,7 +50,7 @@ export class CourseList {
     );
 
     console.log(
-      'CourseList: Enrollment requested for:',
+      'Enrollment requested:',
       course
     );
   }

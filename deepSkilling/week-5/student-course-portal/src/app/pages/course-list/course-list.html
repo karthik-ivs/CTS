@@ -2,24 +2,44 @@
 
   <h1>Available Courses</h1>
 
+  <!-- @if: Display enrollment message only when a course is selected -->
+
   @if (enrolledCourseId) {
-    <p>
+
+    <div class="success-message">
       Successfully enrolled in course ID:
-      {{ enrolledCourseId }}
-    </p>
+      <strong>{{ enrolledCourseId }}</strong>
+    </div>
+
   }
 
-  <div class="courses">
+  <!-- @if: Display message when there are no courses -->
 
-    @for (course of courses; track course.id) {
+  @if (courses.length === 0) {
 
-      <app-course-card
-        [course]="course"
-        (enrollRequested)="onEnroll($event)">
-      </app-course-card>
+    <div class="empty-message">
+      No courses are currently available.
+    </div>
 
-    }
+  }
 
-  </div>
+  <!-- @for: Display each course dynamically -->
+
+  @if (courses.length > 0) {
+
+    <div class="courses">
+
+      @for (course of courses; track course.id) {
+
+        <app-course-card
+          [course]="course"
+          (enrollRequested)="onEnroll($event)">
+        </app-course-card>
+
+      }
+
+    </div>
+
+  }
 
 </div>

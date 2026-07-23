@@ -1,18 +1,55 @@
-<div class="course-card">
+<div
+  class="course-card"
+  [ngClass]="{
+    'popular-course': course.isPopular,
+    'regular-course': !course.isPopular
+  }"
+  [ngStyle]="{
+    'border-width': course.credits >= 4 ? '3px' : '1px'
+  }">
+
+  @if (course.isPopular) {
+
+    <span class="popular-badge">
+      POPULAR
+    </span>
+
+  }
 
   <h3>{{ course.name }}</h3>
 
   <p>
+    <strong>Uppercase:</strong>
+    {{ course.name | uppercase }}
+  </p>
+
+  <p>
+    <strong>Lowercase:</strong>
+    {{ course.name | lowercase }}
+  </p>
+
+  <p>
     <strong>Course Code:</strong>
-    {{ course.code }}
+    {{ course.code | courseCode }}
   </p>
 
   <p>
     <strong>Credits:</strong>
-    {{ course.credits }}
+    {{ course.credits | number }}
   </p>
 
-  <button (click)="onEnroll()">
+  <p>
+    <strong>Start Date:</strong>
+    {{ courseStartDate | date:'dd-MM-yyyy' }}
+  </p>
+
+  <p>
+    <strong>Course Fee:</strong>
+    {{ courseFee | currency:'INR' }}
+  </p>
+
+  <button
+    (click)="onEnroll()">
     Enroll
   </button>
 
