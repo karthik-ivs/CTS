@@ -1,1 +1,25 @@
-<p>course-list works!</p>
+<div class="course-list-container">
+
+  <h1>Available Courses</h1>
+
+  @if (enrolledCourseId) {
+    <p>
+      Successfully enrolled in course ID:
+      {{ enrolledCourseId }}
+    </p>
+  }
+
+  <div class="courses">
+
+    @for (course of courses; track course.id) {
+
+      <app-course-card
+        [course]="course"
+        (enrollRequested)="onEnroll($event)">
+      </app-course-card>
+
+    }
+
+  </div>
+
+</div>

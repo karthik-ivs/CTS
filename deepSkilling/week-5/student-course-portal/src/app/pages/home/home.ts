@@ -1,28 +1,52 @@
-import { Component } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  OnDestroy
+} from '@angular/core';
+
+import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { LifecycleDemo } from '../../components/lifecycle-demo/lifecycle-demo';
 
 @Component({
   selector: 'app-home',
-  imports: [FormsModule],
+  imports: [
+    CommonModule,
+    FormsModule,
+    LifecycleDemo
+  ],
   templateUrl: './home.html',
   styleUrl: './home.css'
 })
-export class Home {
+export class Home implements OnInit, OnDestroy {
 
-  // Interpolation
   portalName = 'Student Course Portal';
 
-  // Property Binding
   isPortalActive = true;
 
-  // Event Binding
   message = '';
 
-  // Two-way Binding
   searchTerm = '';
 
-  // Called when the Enroll Now button is clicked
+  showLifecycleDemo = true;
+
+  constructor() {
+    console.log('Home Constructor: Home component created');
+  }
+
+  ngOnInit(): void {
+    console.log('Home ngOnInit: Home component initialized');
+  }
+
+  ngOnDestroy(): void {
+    console.log('Home ngOnDestroy: Home component destroyed');
+  }
+
   onEnrollClick(): void {
     this.message = 'Enrollment opened!';
+  }
+
+  toggleLifecycleDemo(): void {
+    this.showLifecycleDemo = !this.showLifecycleDemo;
   }
 }

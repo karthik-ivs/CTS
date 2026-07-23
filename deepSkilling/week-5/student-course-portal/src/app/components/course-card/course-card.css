@@ -1,0 +1,32 @@
+.course-card {
+  width: 300px;
+  padding: 20px;
+  margin: 15px;
+  border-radius: 10px;
+  background-color: #f5f5f5;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  text-align: left;
+}
+
+.course-card h3 {
+  margin-top: 0;
+  color: #1976d2;
+}
+
+.course-card p {
+  margin: 8px 0;
+}
+
+.course-card button {
+  margin-top: 10px;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #1976d2;
+  color: white;
+  cursor: pointer;
+}
+
+.course-card button:hover {
+  background-color: #125aa0;
+}

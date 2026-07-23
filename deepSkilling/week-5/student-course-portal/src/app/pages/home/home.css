@@ -68,3 +68,14 @@ button:disabled {
 .stat-card p {
   margin-top: 10px;
 }
+
+.lifecycle-button {
+  margin-top: 30px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #1976d2;
+  color: white;
+}

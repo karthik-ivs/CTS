@@ -84,4 +84,16 @@
 
   </div>
 
+  <button
+  class="lifecycle-button"
+  (click)="toggleLifecycleDemo()">
+  Toggle Lifecycle Component
+</button>
+
+@if (showLifecycleDemo) {
+  <app-lifecycle-demo
+    [courseName]="searchTerm">
+  </app-lifecycle-demo>
+}
+
 </div>

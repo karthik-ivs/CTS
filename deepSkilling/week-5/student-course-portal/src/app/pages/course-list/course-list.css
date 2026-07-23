@@ -1,0 +1,23 @@
+.course-list-container {
+  padding: 40px;
+  text-align: center;
+}
+
+.course-list-container h1 {
+  margin-bottom: 20px;
+}
+
+.course-list-container > p {
+  padding: 15px;
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.courses {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
