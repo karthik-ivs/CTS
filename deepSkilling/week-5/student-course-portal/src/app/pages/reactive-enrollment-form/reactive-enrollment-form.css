@@ -1,0 +1,109 @@
+.enrollment-container {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 25px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.checkbox-group {
+  margin-bottom: 20px;
+}
+
+.checkbox-group input {
+  width: auto;
+}
+
+button {
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+input.ng-invalid.ng-touched,
+select.ng-invalid.ng-touched {
+  border: 2px solid red;
+}
+
+input.ng-valid.ng-touched,
+select.ng-valid.ng-touched {
+  border: 2px solid green;
+}
+
+.additional-course {
+  margin-top: 15px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.additional-course input {
+  margin-bottom: 10px;
+}
+
+.additional-course button {
+  margin-left: 10px;
+}
+
+.checking {
+  color: #666;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.additional-course {
+  margin-top: 15px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.additional-course label {
+  margin-bottom: 8px;
+}
+
+.additional-course input {
+  margin-bottom: 10px;
+}
+
+.additional-course button {
+  margin-left: 10px;
+}
