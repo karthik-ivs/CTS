@@ -1,56 +1,21 @@
-<div
+<article
   class="course-card"
-  [ngClass]="{
-    'popular-course': course.isPopular,
-    'regular-course': !course.isPopular
-  }"
-  [ngStyle]="{
-    'border-width': course.credits >= 4 ? '3px' : '1px'
-  }">
-
-  @if (course.isPopular) {
-
-    <span class="popular-badge">
-      POPULAR
-    </span>
-
-  }
-
-  <h3>{{ course.name }}</h3>
-
-  <p>
-    <strong>Uppercase:</strong>
-    {{ course.name | uppercase }}
+  [ngClass]="cardClasses"
+  [ngStyle]="{ 'border-left-color': borderColor }"
+  (click)="courseSelected.emit(course.id)">
+  <h2>{{ course.name }}</h2>
+  <p><strong>ID:</strong> {{ course.id }}</p>
+  <p><strong>Code:</strong> {{ course.code }}</p>
+  <p><strong>Credits:</strong> {{ course.credits | creditLabel }}</p>
+  <p [ngSwitch]="course.gradeStatus">
+    <span *ngSwitchCase="'passed'" class="badge badge--passed">Passed</span>
+    <span *ngSwitchCase="'failed'" class="badge badge--failed">Failed</span>
+    <span *ngSwitchDefault class="badge badge--pending">Pending</span>
   </p>
+  <button (click)="toggleEnrollment($event)">{{ (isEnrolled$ | async) ? 'Unenroll' : 'Enroll' }}</button>
+  <button (click)="toggleDetails($event)">Show Details</button>
 
-  <p>
-    <strong>Lowercase:</strong>
-    {{ course.name | lowercase }}
-  </p>
-
-  <p>
-    <strong>Course Code:</strong>
-    {{ course.code | courseCode }}
-  </p>
-
-  <p>
-    <strong>Credits:</strong>
-    {{ course.credits | number }}
-  </p>
-
-  <p>
-    <strong>Start Date:</strong>
-    {{ courseStartDate | date:'dd-MM-yyyy' }}
-  </p>
-
-  <p>
-    <strong>Course Fee:</strong>
-    {{ courseFee | currency:'INR' }}
-  </p>
-
-  <button
-    (click)="onEnroll()">
-    Enroll
-  </button>
-
-</div>
+  <div *ngIf="isExpanded">
+    <p>Course details are now visible.</p>
+  </div>
+</article>

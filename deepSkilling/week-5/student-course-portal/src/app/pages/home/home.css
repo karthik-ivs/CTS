@@ -1,81 +1,28 @@
-.home-container {
-  text-align: center;
-  padding: 40px;
-}
-
-.home-container h1 {
-  font-size: 32px;
-  margin-bottom: 15px;
-}
-
-.home-container > p {
-  font-size: 18px;
-  color: #555;
-}
-
-button {
-  margin-top: 20px;
-  padding: 10px 25px;
-  font-size: 16px;
-  cursor: pointer;
-  border: none;
-  border-radius: 5px;
-  background-color: #1976d2;
-  color: white;
-}
-
-button:disabled {
-  background-color: #999;
-  cursor: not-allowed;
-}
-
-.search-section {
-  margin-top: 30px;
-}
-
-.search-section label {
-  margin-right: 10px;
-  font-weight: bold;
-}
-
-.search-section input {
-  padding: 10px;
-  width: 250px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+section {
+  margin: 3rem auto;
+  max-width: 900px;
+  padding: 0 1.5rem;
 }
 
 .stats-row {
   display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 40px;
+  gap: 1rem;
+  margin-top: 2rem;
 }
 
-.stat-card {
-  width: 200px;
-  padding: 25px;
-  border-radius: 10px;
-  background-color: #f5f5f5;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+.stats-row div {
+  background: #eef4fb;
+  border-radius: 8px;
+  padding: 1rem;
 }
 
-.stat-card h2 {
-  font-size: 30px;
-  margin: 0;
+button,
+input {
+  margin-top: 1.5rem;
+  padding: 0.65rem 0.9rem;
 }
 
-.stat-card p {
-  margin-top: 10px;
-}
-
-.lifecycle-button {
-  margin-top: 30px;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  border: none;
-  border-radius: 5px;
-  background-color: #1976d2;
-  color: white;
+label {
+  display: block;
+  margin-top: 1.5rem;
 }

@@ -1,23 +1,11 @@
-.course-list-container {
-  padding: 40px;
-  text-align: center;
+section {
+  margin: 3rem auto;
+  max-width: 900px;
+  padding: 0 1.5rem;
 }
 
-.course-list-container h1 {
-  margin-bottom: 20px;
-}
-
-.course-list-container > p {
-  padding: 15px;
-  background-color: #e8f5e9;
-  color: #2e7d32;
-  border-radius: 5px;
-  display: inline-block;
-}
-
-.courses {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 30px;
+.course-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }

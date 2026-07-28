@@ -1,99 +1,21 @@
-<div class="home-container">
-
-  <!--
-    1. INTERPOLATION
-    Data flows from the component to the HTML.
-    Angular replaces {{ portalName }} with its value.
-  -->
+<section>
   <h1>{{ portalName }}</h1>
-
-  <p>
-    Manage your courses, track your enrollment, and view your academic profile
-    from one convenient portal.
-  </p>
-
-
-  <!--
-    2. PROPERTY BINDING
-    [disabled] sends the value from the component to the DOM.
-    Since isPortalActive is true, !isPortalActive is false,
-    so the button is enabled.
-  -->
-  <button
-    [disabled]="!isPortalActive"
-    (click)="onEnrollClick()">
-    Enroll Now
-  </button>
-
-
-  <!--
-    3. EVENT BINDING
-    (click) listens for a click event from the user
-    and calls the onEnrollClick() method.
-  -->
-  <p *ngIf="message">
-    {{ message }}
-  </p>
-
-
-  <!--
-    4. TWO-WAY BINDING
-    [(ngModel)] keeps searchTerm and the input value synchronized.
-
-    [property] = one-way binding: Component → DOM
-
-    [(ngModel)] = two-way binding: DOM ↔ Component
-  -->
-  <div class="search-section">
-
-    <label for="search">
-      Search Courses:
-    </label>
-
-    <input
-      id="search"
-      type="text"
-      [(ngModel)]="searchTerm"
-      placeholder="Enter course name">
-
-    <p>
-      Searching for: {{ searchTerm }}
-    </p>
-
-  </div>
-
-
-  <!-- Existing Statistics -->
+  <p>Explore courses, track your learning, and view your academic progress.</p>
 
   <div class="stats-row">
-
-    <div class="stat-card">
-      <h2>12</h2>
-      <p>Courses Available</p>
-    </div>
-
-    <div class="stat-card">
-      <h2>3</h2>
-      <p>Enrolled</p>
-    </div>
-
-    <div class="stat-card">
-      <h2>3.8</h2>
-      <p>GPA</p>
-    </div>
-
+    <div><strong>Courses Available:</strong> {{ availableCourses }}</div>
+    <div><strong>Enrolled:</strong> 3</div>
+    <div><strong>GPA:</strong> 3.8</div>
   </div>
 
-  <button
-  class="lifecycle-button"
-  (click)="toggleLifecycleDemo()">
-  Toggle Lifecycle Component
-</button>
+  <app-course-summary-widget></app-course-summary-widget>
+  <app-notification></app-notification>
 
-@if (showLifecycleDemo) {
-  <app-lifecycle-demo
-    [courseName]="searchTerm">
-  </app-lifecycle-demo>
-}
+  <button [disabled]="!isPortalActive" (click)="onEnrollClick()">Enroll Now</button>
+  <p>{{ message }}</p>
 
-</div>
+  <label for="course-search">Search courses</label>
+  <!-- [property] sends data from the component to the DOM; [(ngModel)] keeps the DOM and component property in sync. -->
+  <input id="course-search" [(ngModel)]="searchTerm" placeholder="Enter a course name" />
+  <p>Searching for: {{ searchTerm }}</p>
+</section>

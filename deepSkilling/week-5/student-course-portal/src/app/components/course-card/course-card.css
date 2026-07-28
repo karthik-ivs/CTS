@@ -1,51 +1,49 @@
+:host {
+  display: block;
+}
+
 .course-card {
-  width: 300px;
-  padding: 20px;
-  margin: 15px;
-  border-style: solid;
-  border-radius: 10px;
-  text-align: left;
-  position: relative;
-  transition: transform 0.2s;
+  border: 1px solid #cbd5e1;
+  border-left: 6px solid;
+  border-radius: 8px;
+  padding: 1rem;
+  transition: min-height 0.2s ease;
 }
 
-.course-card:hover {
-  transform: translateY(-5px);
-}
-
-.popular-course {
-  background-color: #fff8e1;
-  border-color: #ff9800;
-}
-
-.regular-course {
-  background-color: #f5f5f5;
-  border-color: #1976d2;
-}
-
-.popular-badge {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  padding: 5px 8px;
-  background-color: #ff9800;
-  color: white;
-  border-radius: 4px;
-  font-size: 12px;
-  font-weight: bold;
-}
-
-.course-card h3 {
+h2 {
   margin-top: 0;
-  color: #1976d2;
 }
 
-.course-card button {
-  margin-top: 10px;
-  padding: 8px 20px;
-  border: none;
-  border-radius: 5px;
-  background-color: #1976d2;
+.card--enrolled {
+  background: #dcfce7;
+}
+
+.card--full {
+  box-shadow: 0 0 0 2px #f59e0b;
+}
+
+.expanded {
+  min-height: 250px;
+}
+
+.badge {
+  border-radius: 12px;
   color: white;
-  cursor: pointer;
+  padding: 0.2rem 0.5rem;
+}
+
+.badge--passed {
+  background: green;
+}
+
+.badge--failed {
+  background: red;
+}
+
+.badge--pending {
+  background: grey;
+}
+
+button + button {
+  margin-left: 0.5rem;
 }
